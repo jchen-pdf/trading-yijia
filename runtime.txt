@@ -1,1 +1,1 @@
-python-3.10.6 on all supported stacks (recommended)
+python-3.9.13 on all supported stacks
