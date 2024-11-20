@@ -1,0 +1,22 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Assignment</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Role Assignment</h1>
+        <p>Welcome, {{ player.participant_role }}!</p>
+        <p>You have been assigned the role of a <strong>{{ player.participant_role }}</strong> in this round.</p>
+        <p>Your information level for this round is <strong>{{ player.info_level }}</strong>.</p>
+        <p>Please carefully review your role and information level before proceeding to the trading stage.</p>
+        <p>Click "Next" to proceed to the trading stage.</p>
+    </div>
+    
+    <button class="btn btn-primary">SUBMIT</button>
+</body>
+</html>
+{% endblock %}

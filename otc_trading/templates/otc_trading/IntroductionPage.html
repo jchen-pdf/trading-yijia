@@ -1,0 +1,42 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTC Market Experiment Introduction</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css">
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        <h1>Welcome to the OTC Market Experiment</h1>
+        <p>
+            In this experiment, you will participate in an Over-the-Counter (OTC) trading environment. 
+            OTC trading is characterized by participants negotiating directly with each other to determine 
+            the prices and quantities for trading.
+        </p>
+        <p>
+            You will be assigned a role as either a <strong>Buyer</strong> or a <strong>Seller</strong>.
+            Buyers will make bids to purchase units, while Sellers will make offers to sell their units. 
+            Your objective is to maximize your earnings by trading effectively.
+        </p>
+        <p>
+            Additionally, you will be assigned an <strong>information level</strong>, which can be either <strong>high</strong> or <strong>low</strong>. 
+            The information level will determine how much market information you have access to during the trading phase.
+        </p>
+        <ul>
+            <li>Each Buyer can negotiate with Sellers to find the best possible price.</li>
+            <li>Each Seller can negotiate with Buyers to maximize their earnings.</li>
+            <li>Try to make profitable trades, but remember that negotiation is key!</li>
+        </ul>
+        <p>
+            Click the button below when you are ready to proceed to the role assignment phase.
+        </p>
+        <button class="btn btn-primary">SUBMIT</button>
+        {% endblock %}
+    </div>
+</body>
+</html>
+
+{% endblock %}

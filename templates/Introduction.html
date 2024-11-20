@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+</head>
+<body>
+    <h1>Welcome to the Trading Experiment!</h1>
+    <p>In this experiment, you will participate in a market where the trading mechanism is: <strong>{{ treatment }}</strong>.</p>
+    
+    <p>You are starting with an initial endowment of <strong>{{ endowment }}</strong> units.</p>
+    
+    <p>Depending on the market mechanism, you may engage in different types of trading activities, including:</p>
+    <ul>
+        <li>Over-the-Counter (OTC) negotiations.</li>
+        <li>Double Auction trading, where multiple buyers and sellers interact simultaneously.</li>
+        <li>Call Market, where trading takes place at specific intervals.</li>
+    </ul>
+    
+    <p>In each round, you will have an opportunity to make trading decisions that could impact your earnings. The goal is to maximize your final earnings through effective trading strategies.</p>
+    
+    <p>Once you are ready to begin, click the button below.</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Start Trading</button>
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Offer Submission</h1>
+        <p>Role: <strong>{{ player.role }}</strong></p>
+        <p>Information Level: <strong>{{ player.info_level }}</strong></p>
+        <p>Initial Endowment: <strong>{{ endowment }}</strong> units</p>
+
+        {% if player.info_level == 'high' %}
+            <p>You have access to more detailed market information. Use this information wisely to make a competitive offer.</p>
+        {% else %}
+            <p>Your information is limited. Consider making an offer based on your best estimate.</p>
+        {% endif %}
+        
+        <label for="offer_price">Enter your offer price:</label>
+                {{ form.offer_price }}
+        <button class="btn btn-primary">SUBMIT</button>
+    </div>
+</body>
+</html>
+{% endblock %}

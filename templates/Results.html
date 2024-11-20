@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <p>Thank you for participating in the trading round!</p>
+    
+    <p>In this <strong>{{ treatment }}</strong> market, here are your results:</p>
+    <ul>
+        <li><strong>Units traded:</strong> {{ units_traded }}</li>
+        <li><strong>Your earnings:</strong> {{ earnings }}</li>
+        <li><strong>Clearing price:</strong> {{ clearing_price }}</li>
+    </ul>
+    
+    <p>Your final endowment after trading is: <strong>{{ final_endowment }}</strong> units.</p>
+
+    <p>Click the button below to proceed to the next round or finish the experiment.</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Proceed</button>
+    </form>
+</body>
+</html>
+

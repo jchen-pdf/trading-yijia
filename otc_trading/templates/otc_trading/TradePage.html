@@ -1,0 +1,30 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Page</title>   
+</head>
+<body>
+    <div class="container">
+        <h1>Trade Units</h1>
+        <p>Role: <strong>{{ player.role }}</strong></p>
+        <p>Information Level: <strong>{{ player.info_level }}</strong></p>
+        <p>Available Units: <strong>{{ available_units }}</strong></p>
+        <p>Clearing Price: <strong>{{ clearing_price }}</strong></p>
+
+        {% if player.info_level == 'high' %}
+            <p>You have access to more detailed information about the clearing price. Use this to make informed decisions on the number of units to trade.</p>
+        {% else %}
+            <p>Your information is limited. Make your best judgment when deciding how many units to trade.</p>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="units_traded">Enter number of units to trade:</label>
+            {{ form.units_traded }}
+        <button type="submit" class="btn btn-primary">Submit Trade</button>
+    </div>
+</body>
+</html>
+{% endblock %}

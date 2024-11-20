@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Phase</title>
+</head>
+<body>
+    <h1>Trading Phase</h1>
+    <p>You are participating in a <strong>{{ treatment }}</strong> market.</p>
+    <p>Your current endowment is: <strong>{{ current_endowment }}</strong> units.</p>
+    
+    <p>Total units traded in your group so far: <strong>{{ total_units_traded }}</strong>.</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="units_traded">Enter the number of units you wish to trade:</label>
+        <input type="number" name="units_traded" id="units_traded" min="0" max="{{ current_endowment // 10 }}" required>
+        <br><br>
+        <input type="submit" value="Submit Trade">
+    </form>
+
+    <p><em>Note: Each unit you trade costs 10 units of your endowment.</em></p>
+</body>
+</html>
+

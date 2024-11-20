@@ -1,0 +1,27 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTC Market Experiment Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Results</h1>
+        <p>
+            The OTC market experiment has concluded. Below are your results:
+        </p>
+        <ul>
+            <li><strong>Your Earnings:</strong> {{ earnings }}</li>
+            <li><strong>Your Final Endowment:</strong> {{ final_endowment }}</li>
+            <li><strong>Total Units Traded in the Group:</strong> {{ total_units_traded }}</li>
+        </ul>
+        <p>
+            Thank you for participating in the experiment. We hope you enjoyed the experience and learned more about OTC trading dynamics.
+        </p>
+        <button type="submit" class="btn btn-primary">Finish</button>
+    </div>
+</body>
+</html>
+{% endblock %}
