@@ -1,1 +1,1 @@
-python-3.8.13 on Heroku-18 and Heroku-20 only
+python-3.7.13 on Heroku-18 and Heroku-20 only
